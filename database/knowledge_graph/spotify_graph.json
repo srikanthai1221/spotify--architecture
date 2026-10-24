@@ -1,0 +1,153 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {},
+  "nodes": [
+    {
+      "type": "entity",
+      "id": "Analytics & Events Service"
+    },
+    {
+      "type": "entity",
+      "id": "Recommendation Service"
+    },
+    {
+      "type": "entity",
+      "id": "Catalog Service"
+    },
+    {
+      "type": "entity",
+      "id": "Tracks"
+    },
+    {
+      "type": "entity",
+      "id": "Albums"
+    },
+    {
+      "type": "entity",
+      "id": "Artists"
+    },
+    {
+      "type": "entity",
+      "id": "Search & Discovery Index Service"
+    },
+    {
+      "type": "entity",
+      "id": "Playlists"
+    },
+    {
+      "type": "entity",
+      "id": "Library & Playlist Service"
+    },
+    {
+      "type": "entity",
+      "id": "Playback & Session Service"
+    },
+    {
+      "type": "entity",
+      "id": "Playback Sessions"
+    },
+    {
+      "type": "entity",
+      "id": "Subscription & Billing Service"
+    },
+    {
+      "type": "entity",
+      "id": "Subscriptions"
+    },
+    {
+      "type": "entity",
+      "id": "Media Processor Service"
+    },
+    {
+      "type": "entity",
+      "id": "Object Storage"
+    },
+    {
+      "type": "entity",
+      "id": "Streaming / Media Delivery Service"
+    },
+    {
+      "type": "entity",
+      "id": "CDN"
+    },
+    {
+      "type": "entity",
+      "id": "ClickHouse / Data Warehouse"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "feeds listening data to",
+      "source": "Analytics & Events Service",
+      "target": "Recommendation Service",
+      "key": 0
+    },
+    {
+      "relation": "stores events in",
+      "source": "Analytics & Events Service",
+      "target": "ClickHouse / Data Warehouse",
+      "key": 0
+    },
+    {
+      "relation": "manages metadata for",
+      "source": "Catalog Service",
+      "target": "Tracks",
+      "key": 0
+    },
+    {
+      "relation": "manages metadata for",
+      "source": "Catalog Service",
+      "target": "Albums",
+      "key": 0
+    },
+    {
+      "relation": "manages metadata for",
+      "source": "Catalog Service",
+      "target": "Artists",
+      "key": 0
+    },
+    {
+      "relation": "indexes",
+      "source": "Search & Discovery Index Service",
+      "target": "Tracks",
+      "key": 0
+    },
+    {
+      "relation": "indexes",
+      "source": "Search & Discovery Index Service",
+      "target": "Playlists",
+      "key": 0
+    },
+    {
+      "relation": "manages",
+      "source": "Library & Playlist Service",
+      "target": "Playlists",
+      "key": 0
+    },
+    {
+      "relation": "manages",
+      "source": "Playback & Session Service",
+      "target": "Playback Sessions",
+      "key": 0
+    },
+    {
+      "relation": "manages",
+      "source": "Subscription & Billing Service",
+      "target": "Subscriptions",
+      "key": 0
+    },
+    {
+      "relation": "writes processed files to",
+      "source": "Media Processor Service",
+      "target": "Object Storage",
+      "key": 0
+    },
+    {
+      "relation": "delivers audio through",
+      "source": "Streaming / Media Delivery Service",
+      "target": "CDN",
+      "key": 0
+    }
+  ]
+}
